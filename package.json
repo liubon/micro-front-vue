@@ -1,0 +1,23 @@
+{
+  "name": "mirco-front-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:main": "cd main-app && install",
+    "install:app-a": "cd main-app-a && install",
+    "install:app-b": "cd main-app-b && install",
+    "install:app-c": "cd main-app-c && install",
+    "install-all": "npm-run-all --parallel install*",
+    "start:main": "cd main-app && npm run serve",
+    "start:app-a": "cd micro-app-a && npm run serve",
+    "start:app-b": "cd micro-app-b && npm run serve",
+    "start:app-c": "cd micro-app-c && npm run serve",
+    "start-all": "npm-run-all --parallel start:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
