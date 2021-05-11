@@ -1,14 +1,16 @@
 // vue.config.js
-const packageName = require('./package.json').name;
+const packageName = require("./package.json").name;
 const port = 7101; // dev port
 module.exports = {
   configureWebpack: {
     output: {
       library: `${packageName}-[name]`,
-      libraryTarget: 'umd',
+      libraryTarget: "umd",
       jsonpFunction: `webpackJsonp_${packageName}`,
     },
   },
+  // 开发运行时懒加载
+  publicPath: `//localhost:${port}`,
   devServer: {
     // host: '0.0.0.0',
     hot: true,
@@ -19,7 +21,7 @@ module.exports = {
       errors: true,
     },
     headers: {
-      'Access-Control-Allow-Origin': '*',
+      "Access-Control-Allow-Origin": "*",
     },
   },
 };

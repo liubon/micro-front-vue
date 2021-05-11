@@ -1,7 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Index from "@/views/Index.vue";
-import StepOne from "@/views/StepOne.vue";
-import StepTwo from "@/views/StepTwo.vue";
+// import Index from "@/views/Index.vue";
+// import StepOne from "@/views/StepOne.vue";
+// import StepTwo from "@/views/StepTwo.vue";
+const Index = () => import("@/views/Index.vue");
+const StepOne = () => import("@/views/StepOne.vue");
+const StepTwo = () => import("@/views/StepTwo.vue");
 
 let router = null;
 
@@ -31,7 +34,7 @@ export function getRouter(routerBase) {
     history: createWebHashHistory(),
     routes: getRoutes(routerBase), // `routes: routes` 的缩写
   });
-  return router
+  return router;
 }
 
 export default router;

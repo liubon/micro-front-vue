@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import { getRouter } from "./router/index";
-
 // vue实例卸载后不能重新挂载
 let app = null;
 

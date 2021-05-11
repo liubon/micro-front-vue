@@ -8,9 +8,11 @@
 <script>
 import { loadMicroApp } from "qiankun";
 import { defineComponent } from "vue";
+import useQianKun from "@/hooks/useQianKun";
 export default defineComponent({
   name: "About",
   setup() {
+    useQianKun()
     loadMicroApp({
       name: "micro-app-c",
       entry: "//localhost:7103",
