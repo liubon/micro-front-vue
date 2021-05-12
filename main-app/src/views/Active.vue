@@ -11,15 +11,16 @@
 <script>
 import { defineComponent, ref } from "vue";
 import { useRouter } from "vue-router";
-import useQianKun from "@/hooks/useQianKun";
+// import useQianKun from "@/hooks/useQianKun";
 export default defineComponent({
   name: "Active",
   setup() {
+    console.log('active')
     const microApps = ref([
       { id: "app-01", name: "micro-app-a" },
       { id: "app-02", name: "micro-app-b" },
     ]);
-    useQianKun();
+    // useQianKun();
     const router = useRouter();
     const chooseMicroApp = (microApp) => {
       console.log(microApp);

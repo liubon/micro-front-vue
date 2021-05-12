@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-
+import { getRouter } from "./router/index";
+import { useInitRouterBase } from "./hooks/useBasePath";
 // vue实例卸载后不能重新挂载
 let app = null;
 
@@ -18,6 +19,10 @@ export async function bootstrap() {
 export async function mount(props) {
   if (!app) {
     app = createApp(App);
+    console.log('props.routerBase',props.routerBase)
+    useInitRouterBase(app, props.routerBase);
+    const router = getRouter(props.routerBase);
+    app.use(router);
   }
   console.log("mount:micro-app-b");
   console.log(props);

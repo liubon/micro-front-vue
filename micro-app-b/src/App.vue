@@ -2,6 +2,7 @@
   <div class="micro-app-b">
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to micro-app-b." />
+    <router-view></router-view>
   </div>
 </template>
 

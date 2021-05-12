@@ -1,11 +1,12 @@
 <template>
   <div>
-    <h3>Step One</h3>
+    <h3>Step One page.</h3>
   </div>
 </template>
-
 <script>
-export default {};
+export default {
+  name: "StepOne",
+};
 </script>
 
 <style>

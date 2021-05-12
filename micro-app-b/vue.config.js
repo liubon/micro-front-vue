@@ -9,6 +9,7 @@ module.exports = {
       jsonpFunction: `webpackJsonp_${packageName}`,
     },
   },
+  publicPath: `//localhost:${port}`,
   devServer: {
     // host: '0.0.0.0',
     hot: true,
