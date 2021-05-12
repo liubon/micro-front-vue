@@ -1,8 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 const Index = () => import("@/views/Index.vue");
-const StepOne = () => import("@/views/StepOne.vue");
-const StepTwo = () => import("@/views/StepTwo.vue");
+const SectionA = () => import("@/views/SectionA.vue");
+const SectionB = () => import("@/views/SectionB.vue");
 
 let router = null;
 
@@ -13,17 +13,17 @@ const getRoutes = (routerBase) => [
     component: Index,
     children: [
       {
-        name: "stepOne",
-        path: "stepOne",
-        component: StepOne,
+        name: "sectionA",
+        path: "sectionA",
+        component: SectionA,
       },
       {
-        name: "stepTwo",
-        path: "stepTwo",
-        component: StepTwo,
+        name: "sectionb",
+        path: "sectionb",
+        component: SectionB,
       },
     ],
-  }
+  },
 ];
 
 export function getRouter(routerBase) {

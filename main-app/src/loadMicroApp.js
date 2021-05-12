@@ -1,4 +1,4 @@
-import { registerMicroApps } from "qiankun";
+import { registerMicroApps ,start} from "qiankun";
 const getActiveRule = (hash) => (location) => {
   return location.hash.startsWith(hash);
 };
@@ -20,6 +20,6 @@ registerMicroApps([
 ]);
 // 首屏加载微应用时，容器为初始化
 setTimeout(() => {
-  // start();
+  start();
 },0);
 
